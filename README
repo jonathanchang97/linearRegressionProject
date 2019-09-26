@@ -1,0 +1,32 @@
+Name:  Jonathan Chang
+SID: 1225484
+
+
+Language and libraries:
+My program is written in Python version 3.7.4 and uses the numpy and math 
+
+
+Execution instructions:
+cd hw1
+source venv/bin/activate
+pip install -r requirements.txt
+python3 ./decisionTreeAlg.py
+"Enter the 3 inputs"
+
+After:
+deactivate 		# to leave virtual environment
+pip freeze > requirements.txt
+
+
+Comments on the instructions
+cd hw1 # into the project directory
+Installed virtual env using pip install virtualenv (assuming standard python installations like python and pip are already installed)
+created virtual environment for project with virtualenv venv
+pip install -r requirements.txt to install the packages
+source venv/bin/activate
+pip install numpy
+python3 ./decisionTreeAlg.py
+
+
+Collaborators and resources:
+Nobody
