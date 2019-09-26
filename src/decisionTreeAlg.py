@@ -228,7 +228,8 @@ def printTree(tree, count, printStr, fst):
 		return count
 	else:
 		branchStr = "Branch[{}]: ".format(count)
-		printStr += "Attrib #{}: {}; {}.".format(tree.feature[2], tree.value, tree.guess)
+		printStr += "Attrib #{}: {}; {}.".format(tree.feature[2], 
+												 tree.value, tree.guess)
 		print(branchStr + printStr)
 		return count
 		
@@ -254,11 +255,13 @@ def main():
 	successRateList = []
 	for currTrainingIncr in incrList:
 		# select training examples from data set based on increment
-		print("Running with " + str(currTrainingIncr) + " examples in training set.\n")
+		print("Running with " + str(currTrainingIncr) + 
+			  " examples in training set.\n")
 		(exampleSet,_) = selectSubset(trainingSet, currTrainingIncr)
 
 		# build decision tree using the example set from the training set
-		tree = decisionTreeTrain(exampleSet, None, None, properties, "Poison", heur)
+		tree = decisionTreeTrain(exampleSet, None, None, properties, 
+			                     "Poison", heur)
 
 		count = 0
 		for testPoint in trimmedDataSet:
@@ -286,7 +289,8 @@ def main():
 
 	count = 0
 	for incr in incrList:
-		print("Training set size: {0}.  Success:  {1:.4f} percent.".format(incr, successRateList[count]))
+		print("Training set size: {0}.  Success:  {1:.4f} percent."
+			  .format(incr, successRateList[count]))
 		count += 1
 
 
